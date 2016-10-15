@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title%} TITLE GOES HERE {% endblock %}</title>
+	<link rel= "stylesheet" href= "/static/css/stlye.css">
+</head>
+<body>
+	<h1> Welcome to our company.</h1>
+	<ul>
+		{% for message in get_flashed_messages() %}
+			<li> {{message}} </li>
+		{% endfor %}
+	</ul>
+	{% block content%} BODY CONTENT GOES HERE {% endblock %}
+
+	<br>
+
+	<footer>Last updated Oct 2016 </footer>
+
+</body>
+</html>

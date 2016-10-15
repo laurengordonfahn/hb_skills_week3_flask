@@ -1,0 +1,38 @@
+{% extend 'base.html' %}
+
+{% block title %} Skills-HTML-CSS {% endblock %}
+
+{% block content %}
+    <h1>Job Application Form</h1>
+    <p> Welcome, our company looks forward to recieving your application    information. </p><br>
+    <form action="/application", method="POST">
+    
+        <label for="firstname">First Name:</label>
+            <input id="firstname" class="yellow" type="text" name="firstname    " placeholder="First Name">
+    
+        <br>
+    
+        <label id="lastname" for="lastname">Last Name:</label>
+            <input id="lasttname" class="yellow" type="text" name="lastname"     placeholder="Last Name">
+    
+        <br>
+    
+        <label for="salary">Salary Requirement: $</label>
+            <input id="salary" class="yellow" type="number" name="quantity"     placeholder="Salary">
+    
+        <br>
+    
+        <label for="job_title">Job Title:</label>
+            <select id="job_title" name="job_title">
+                <option value="Software Engingeer">Software Engingeer</ option>
+                <option value="QA Engineer">QA Engineer</option>
+                <option value="Product Manager">Product Manager</option>
+            </select>
+    
+        <br>
+    
+        <input class="yellow" type="submit" name="sumbit" value="Submit">
+    
+    </form>
+
+{% block content %}

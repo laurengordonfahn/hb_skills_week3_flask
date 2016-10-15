@@ -1,0 +1,15 @@
+/* Your styles can go here. */.yellow {
+    background-color: yellow;
+    border-radius: 7px;
+}
+
+#lastname {
+    font-weight: bold;
+} /* I looked up how to make the placeholder text styled differently and it seems that is is Browser specifc and so I am assuming that isn't what was meant by "feild"*/
+
+
+p { 
+    border: solid black 2px;
+    border-radius: 7px;
+}
+/*I chose to round the corners of my everyting because it looks happier*/
