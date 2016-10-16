@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request, flash, redirect
 from flask_debugtoolbar import DebugToolbarExtension
 
 
@@ -18,20 +18,25 @@ def index_page():
     #
     return render_template("index.html")
 
-@app.route("/application_form", methods=["POST"])
+@app.route("/application-form")
 def show_application_form():
-        flash("Thank you. Your application has been submitted.")
+        
         return render_template("application-form.html")
 
+@app.route("/redir")
+def redir():
+    return redirect("/application-form")
 
-@app.route("/application")
+
+@app.route("/application", methods=["POST"])
 def show_submitted_application():
     first_name = request.form.get("firstname")
     last_name = request.form.get("lastname")
     salary = request.form.get("quantity")
     job = request.form.get("job_title")
+
     return render_template("application-response.html", 
-                            quantity= salary, 
+                            quantity = salary, 
                             firstname = first_name, 
                             lastname = last_name,
                             job_title = job)
