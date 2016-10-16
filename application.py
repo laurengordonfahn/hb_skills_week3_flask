@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, redirect
+from flask import Flask, render_template, request, flash
 from flask_debugtoolbar import DebugToolbarExtension
 
 
@@ -22,10 +22,6 @@ def index_page():
 def show_application_form():
         
         return render_template("application-form.html")
-
-@app.route("/redir")
-def redir():
-    return redirect("/application-form")
 
 
 @app.route("/application", methods=["POST"])
